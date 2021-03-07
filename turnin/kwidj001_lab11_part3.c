@@ -255,8 +255,8 @@ int seq2SMTick(int state){
     case seq2_WAIT: break;
     case seq2_ON:
       transmit_data(seq2->front);
-      QueueEnqueue(seq2, seq2->front);
-      QueueDequeue(seq2);
+      QueueEnqueue(seq1, seq1->front);
+      QueueDequeue(seq1);
       break;
   }
   return state;
